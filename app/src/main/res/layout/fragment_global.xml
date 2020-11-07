@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GlobalFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000">
+
+                <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                    android:id="@+id/global_main_exo_player"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:surface_type="texture_view"
+                    app:controller_layout_id="@layout/global_player_controller"
+                    android:animateLayoutChanges="true"
+                    app:resize_mode="zoom" />
+
+            </RelativeLayout>
+
+            <app.jinx.com.Classes.ExpandableHeightGridView
+                android:id="@+id/global_main_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:numColumns="3"
+                android:paddingLeft="6dp"
+                android:verticalSpacing="6dp"
+                android:listSelector="@android:color/transparent"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search people, videos"
+        android:textColor="#fff"
+        android:paddingLeft="20dp"
+        android:paddingRight="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:drawableLeft="@drawable/global_search_icon"
+        android:drawablePadding="10dp"
+        android:textStyle="bold"
+        android:shadowRadius="3"
+        android:shadowColor="#4e4e4e"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:background="@drawable/global_search_textview_bg"/>
+
+</RelativeLayout>
